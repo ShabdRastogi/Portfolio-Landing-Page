@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -17,15 +18,17 @@ a {
 
 .navbar {
     width: 100%;
-    height: 90px;
+    height: 70px;
     padding: 0 7%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: absolute;
+    position:sticky;
     top: 0;
     left: 0;
     z-index: 10;
+    background-color: rgba(5, 5, 5, 0.6);
+    backdrop-filter: blur(12px);
 }
 
 .logo {
@@ -84,20 +87,20 @@ nav a:hover{
 }
 
 .hero-section {
-    height: 100vh;
+    height: calc(100vh - 70px);
     position: relative;
     overflow: hidden;
-    background-color: #050505;
-    background-image: url("./Images/background.png");
-    background-size: contain;
+    background-image: url('./Images/background.png');
     background-position: center;
+    object-fit: cover;
+    
 }
 
 .hero-section::after {
     content: "";
     position: absolute;
     inset: 0;
-    background-color: rgba(0, 0, 0, 0.65);
+    background-color: rgba(0, 0, 0, 0.45);
     z-index: 0;
 }
 
@@ -241,5 +244,213 @@ h1 b {
     width: 50px;
     height: 1px;
     background-color: #444;
+}
+
+.section-header {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: -70px;
+
+}
+
+.section-header p {
+    color: #888;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    
+    gap: 12px;
+}
+.section-header h2 {
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 100px;
+    line-height: 0.8;
+    margin-top: 15px;
+    letter-spacing: -3px;
+    display: flex;
+    justify-content: center;
+    align-items: space-around;
+}
+
+.section-header h2 b {
+    color: #ff2020;
+}
+.about-section {
+    
+    height: 100vh;
+    padding: 120px 7%;
+    position: relative;
+    overflow: hidden;
+    background-color: #050505;
+    background-image:
+        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+    background-size: 80px 80px;
+}
+
+
+
+
+
+.about-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    position: relative;
+    z-index: 2;
+    
+
+}
+
+.about-image {
+    width: 400px;
+    height: 500px;
+    flex-shrink: 0;
+    overflow: hidden;
+    border: 1px solid #333;
+    border-radius: 10px;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+    filter: grayscale(100%);
+    transition: 0.5s;
+}
+
+.about-image img:hover {
+    filter: grayscale(0%);
+    
+    transform: scale(1.03);
+}
+
+.about-text {
+    max-width: 600px;
+}
+
+.about-heading {
+    color: white;
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 38px;
+    line-height: 1;
+    margin-bottom: 25px;
+}
+
+.about-heading b {
+    color: #ff2020;
+}
+.about-personality {
+    display: flex;
+    gap: 60px;
+    margin-top: 40px;
+    padding-top: 25px;
+    border-top: 1px solid #222;
+}
+
+.about-personality h3 {
+    color: #ff2020;
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 30px;
+}
+
+.about-personality p {
+    color: #555;
+    font-size: 9px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-top: 3px;
+}
+
+.skills-section {
+    min-height: 100vh;
+    padding: 120px 7%;
+    position: relative;
+    overflow: hidden;
+    background-color: #080808;
+    background-image:
+        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+    background-size: 80px 80px;
+}
+.skills-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.skill-card {
+    min-height: 420px;
+    padding: 35px 30px;
+    border: 1px solid #252525;
+    background-color: rgba(10, 10, 10, 0.7);
+    transition: 0.3s;
+}
+
+.skill-card:hover {
+    border-color: #ff2020;
+    transform: translateY(-8px);
+}
+
+.skill-number {
+    color: #ff2020;
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.skill-card h3 {
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 28px;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.skill-card > p {
+    color: #777;
+    font-size: 12px;
+    line-height: 1.7;
+    margin-bottom: 35px;
+}
+
+.skill {
+    margin-bottom: 22px;
+}
+
+.skill-name {
+    display: flex;
+    justify-content: space-between;
+    color: #aaa;
+    font-size: 9px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.skill-name span:last-child {
+    color: #555;
+}
+
+.skill-line {
+    width: 100%;
+    height: 2px;
+    background-color: #252525;
+}
+
+.skill-line span {
+    display: block;
+    height: 100%;
+    background-color: #ff2020;
 }
 
