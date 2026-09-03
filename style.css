@@ -541,6 +541,7 @@ nav a:hover{
     transform: translateY(-5px);
 }
 .connect-footer {
+    width: 100%;
     position: relative;
     z-index: 2;
     display: flex;
@@ -835,7 +836,7 @@ nav a:hover{
         font-size: 28px;
     }
 
-    .about-text > p {
+    .about-text p {
         font-size: 12px;
         line-height: 1.8;
     }
@@ -878,7 +879,6 @@ nav a:hover{
     }
 
     .connect-footer div {
-        flex-wrap: wrap;
         gap: 15px;
     }
 }
