@@ -73,7 +73,7 @@ nav a:hover{
     color: white;
 }
 
-.contact-btn {
+.nav-connect-btn {
     padding: 12px 20px;
     border: 1px solid #444;
     font-size: 11px;
@@ -81,7 +81,7 @@ nav a:hover{
     transition: 0.3s;
 }
 
-.contact-btn:hover {
+.nav-connect-btn:hover {
     background-color: #ff2020;
     border-color: #ff2020;
 }
@@ -417,7 +417,7 @@ h1 b {
     margin-bottom: 15px;
 }
 
-.skill-card > p {
+.skill-card p {
     color: #777;
     font-size: 12px;
     line-height: 1.7;
@@ -452,5 +452,213 @@ h1 b {
     display: block;
     height: 100%;
     background-color: #ff2020;
+}
+.projects-section {
+    min-height: 100vh;
+    padding: 140px 7%;
+    position: relative;
+    overflow: hidden;
+    background-color: #050505;
+}
+
+.projects-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+    background-size: 60px 60px;
+    z-index: 0;
+}
+
+
+.projects-content {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px 30px;
+}
+
+.project-card {
+    position: relative;
+}
+
+.project-image {
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    background-color: #111;
+    border: 1px solid #222;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition: 0.5s;
+}
+
+.project-image span {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 30px;
+    font-weight: 800;
+    z-index: 2;
+}
+
+.project-card:hover .project-image img {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+}
+
+.project-card:hover .project-image {
+    border-color: #ff2020;
+}
+
+.project-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-top: 20px;
+    border-top: 1px solid #222;
+    margin-top: 15px;
+}
+
+.project-info p {
+    color: #777;
+    font-size: 9px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 8px;
+}
+
+.project-info h3 {
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 38px;
+    line-height: 0.85;
+    letter-spacing: -1px;
+}
+
+.project-info a {
+    color: #999;
+    font-size: 9px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+.project-info a:hover {
+    color: #ff2020;
+}
+
+.connect-section {
+    min-height: 100vh;
+    padding: 140px 7% 40px;
+    position: relative;
+    overflow: hidden;
+    background-color: #050505;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+.connect-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+}
+
+.connect-small {
+    color: #999;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.connect-small span {
+    width: 35px;
+    height: 2px;
+    background-color: #ff2020;
+}
+
+.connect-content h2 {
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 130px;
+    font-weight: 900;
+    line-height: 0.8;
+    letter-spacing: -4px;
+}
+
+.connect-content h2 b {
+    color: #ff2020;
+}
+
+.connect-description {
+    width: 450px;
+    color: #777;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-top: 35px;
+}
+
+.connect-btn {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 35px;
+    padding: 17px 25px;
+    background-color: #ff2020;
+    color: white;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+.connect-btn span {
+    margin-left: 30px;
+    font-size: 16px;
+}
+
+.connect-btn:hover {
+    background-color: white;
+    color: black;
+    transform: translateY(-5px);
+}
+.connect-footer {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 25px;
+    border-top: 1px solid #222;
+    color: #555;
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+.connect-footer div {
+    display: flex;
+    gap: 30px;
+}
+
+.connect-footer a {
+    color: #777;
+    transition: 0.3s;
+}
+
+.connect-footer a:hover {
+    color: #ff2020;
 }
 
